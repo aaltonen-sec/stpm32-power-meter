@@ -19,7 +19,7 @@ int lastState = LOW;
 int currentState;
 
 // Initialize objects 
-stpm32 stpm2(STPM_RES, STPM_CS, STPM_SYN);  // Class name changed to stpm32
+stpm32 stpm2(STPM_RES, STPM_CS, STPM_SYN);  
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 void setup() {
@@ -38,7 +38,7 @@ void setup() {
     if (!stpm2.init()) {
         Serial.println("STPM Init Failed");
     }
-    stpm2.setCalibration(1.003, 1);  // Calibration function remains
+    stpm2.setCalibration(1.003, 1);  
 }
 
 void loop() {
